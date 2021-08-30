@@ -810,7 +810,7 @@ function init($, _, locale, Handlebars, apiProject, apiData, Prism, sampleReques
                 fields.splice(index, 1);
                 fields.splice(firstIndex, 0, object);
 
-                // Startup the last index with the object index 
+                // Startup the last index with the object index
                 var lastIndex = firstIndex;
 
                 // Iterate over all children
@@ -948,5 +948,9 @@ function init($, _, locale, Handlebars, apiProject, apiData, Prism, sampleReques
         });
         return results;
     }
-    Prism.highlightAll()
+    Prism.highlightAll();
+
+    //	[21.08.20] u.hyeyeon : init body/json
+    $('select').find('option:eq(1)').attr('selected', 'selected');
+    $('select').trigger("change");
 }

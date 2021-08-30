@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="abbdc278-2889-41f0-9d12-42e605e1a206" name="Default Changelist" comment="apidocjs - shopping&#10;&#10;요청타입 구현이 되지 않으므로 생성된 문서에서는 sample request 를 시용할 수 없습니다. (json sample을 복사, 수정해서는 가능)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="JuHyuk Park &lt;creduo@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wCSnftyzUESU2aXS3qZUg3PUxN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abbdc278-2889-41f0-9d12-42e605e1a206" name="Default Changelist" comment="" />
+      <created>1627961245750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627961245750</updated>
+      <workItem from="1627961246976" duration="25642000" />
+      <workItem from="1629181745274" duration="15000" />
+      <workItem from="1629181805597" duration="616000" />
+      <workItem from="1629420704098" duration="12682000" />
+    </task>
+    <task id="LOCAL-00001" summary="#APIDOCS">
+      <created>1629454924936</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629454924936</updated>
+    </task>
+    <task id="LOCAL-00002" summary="#APIDOCS">
+      <created>1629455484030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629455484030</updated>
+    </task>
+    <task id="LOCAL-00003" summary="#APIDOCS">
+      <created>1629456452236</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629456452236</updated>
+    </task>
+    <task id="LOCAL-00004" summary="apidocjs - shopping&#10;&#10;요청타입 구현이 되지 않으므로 생성된 문서에서는 sample request 를 시용할 수 없습니다. (json sample을 복사, 수정해서는 가능)">
+      <created>1629456596432</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629456596432</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#APIDOCS" />
+    <MESSAGE value="apidocjs - shopping&#10;&#10;요청타입 구현이 되지 않으므로 생성된 문서에서는 sample request 를 시용할 수 없습니다. (json sample을 복사, 수정해서는 가능)" />
+    <option name="LAST_COMMIT_MESSAGE" value="apidocjs - shopping&#10;&#10;요청타입 구현이 되지 않으므로 생성된 문서에서는 sample request 를 시용할 수 없습니다. (json sample을 복사, 수정해서는 가능)" />
+  </component>
+</project>
