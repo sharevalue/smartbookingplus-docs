@@ -770,11 +770,11 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "AIR",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/pricing"
+        "url": "https://api-dev.smartbookingplus.com/pricing"
       }
     ]
   },
@@ -919,11 +919,11 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "AIR",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/fare/rule"
+        "url": "https://api-dev.smartbookingplus.com/fare/rule"
       }
     ]
   },
@@ -1638,11 +1638,11 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "AIR",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/shopping"
+        "url": "https://api-dev.smartbookingplus.com/shopping"
       }
     ]
   },
@@ -1704,17 +1704,83 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "Common",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/config_date"
+        "url": "https://api-dev.smartbookingplus.com/config_date"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/v1/air/reservations",
+    "title": "",
+    "version": "0.8.1",
+    "name": "get_reservations",
+    "group": "Common",
+    "permission": [
+      {
+        "name": "public"
+      }
+    ],
+    "description": "<p>조회</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>조회 타입 (예: &quot;holiday&quot;).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result",
+            "description": "<p>&quot;success&quot; or &quot;fail&quot;.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>JSON Array of Dates</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "filename": "src/routes/v1/air/getReservations.ts",
+    "groupTitle": "Common",
+    "sampleRequest": [
+      {
+        "url": "https://api-dev.smartbookingplus.com/v1/air/reservations"
       }
     ]
   },
   {
     "type": "post",
-    "url": "/reservation/air/non-member/:flightId/cancel",
+    "url": "/reservation/air/:flightId/cancel",
     "title": "/:flightId/cancel",
     "version": "0.1.0",
     "name": "reservation_-_cancel",
@@ -1724,13 +1790,20 @@ define({ "api": [
         "name": "user"
       }
     ],
-    "description": "<p>항공 예약 취소 (비회원) : 비회원 관련 정보는 /non-member에서 확인</p>",
+    "description": "<p>항공 예약 취소</p>",
     "parameter": {
       "fields": {
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String[]",
+            "type": "String",
+            "optional": true,
+            "field": "sessionToken",
+            "description": "<p>sessionToken. (현재 의미없음, 회원정보를 세션에서 취하기 때문에 예약취소가 진행되지 않음).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
             "optional": false,
             "field": "account",
             "description": "<p>비회원 인증을 위한 휴대폰 또는 이메일</p>"
@@ -1740,7 +1813,7 @@ define({ "api": [
             "type": "String[]",
             "optional": false,
             "field": "passengers",
-            "description": "<p>예약취소 승객번호 (예약승객 모두 취소시에 예약취소)</p>"
+            "description": "<p>예약취소 승객번호</p>"
           },
           {
             "group": "Parameter",
@@ -1754,7 +1827,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n   \"passengers\": \"[12399]\",\n   \"account\": \"010-0000-0000\",\n   \"nonMemberToken\": \"OTZlNzkyMTg5NjVlYjcyYzkYTU0OWRkNWEzMzAxMTI=\"\n}",
+          "content": "{\n   \"passengers\": \"[12399]\"\n}",
           "type": "json"
         }
       ]
@@ -1814,11 +1887,11 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "Reservation",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/reservation/air/non-member/:flightId/cancel"
+        "url": "https://api-dev.smartbookingplus.com/reservation/air/:flightId/cancel"
       }
     ]
   },
@@ -1834,7 +1907,7 @@ define({ "api": [
         "name": "user"
       }
     ],
-    "description": "<p>항공 예약 생성 (비회원만 생성됨)</p>",
+    "description": "<p>항공 예약 생성</p>",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -2505,197 +2578,17 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "Reservation",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/reservation/create/"
+        "url": "https://api-dev.smartbookingplus.com/reservation/create/"
       }
     ]
   },
   {
     "type": "post",
-    "url": "/reservation/air/non-member",
-    "title": "/non-memberToken",
-    "version": "0.1.0",
-    "name": "reservation_-_get",
-    "group": "Reservation",
-    "permission": [
-      {
-        "name": "user"
-      }
-    ],
-    "description": "<p>항공 예약 정보 확인 (비회원)</p>",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "bookingCode",
-            "description": "<p>예약번호</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "account",
-            "description": "<p>비회원 인증을 위한 휴대폰 또는 이메일</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "password",
-            "description": "<p>비회원 비밀번호</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "SiteId",
-            "description": "<p>Site ID.</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Request-Example:",
-          "content": "{\n   \"bookingCode\": \"18167015\",\n   \"account\": \"010-9966-1143\",\n   \"password\": \"111111\",\n   \"siteId\": \"43\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "status",
-            "description": "<p>응답 상태 &quot;success&quot; or &quot;fail&quot;.</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "statusCode",
-            "description": "<p>응답 상태 코드</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "env",
-            "description": "<p>실행 환경</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>시스템 메세지</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "requestId",
-            "description": "<p>요청 고유 ID</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Object[]",
-            "optional": false,
-            "field": "data",
-            "description": "<p>실행결과 Array</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberToken",
-            "description": "<p>nonMemberToken(ex.OTZlNzkyMTg5NjVlYjcyYzkyYTU0OWRkNWEzMzAxMTI=)</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Object[]",
-            "optional": false,
-            "field": "data.nonMemberReservationList",
-            "description": "<p>nonMemberReservationList 비회원예약목록</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberReservationList.bookingCode",
-            "description": "<p>비회원예약코드</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberReservationList.flightId",
-            "description": "<p>Flight Id</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberReservationList.pnrCode",
-            "description": "<p>pnrCode</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Object[]",
-            "optional": false,
-            "field": "data.nonMemberReservationList.passengers",
-            "description": "<p>예약별 승객 목록</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberReservationList.passengers.passengerId",
-            "description": "<p>승객번호</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberReservationList.passengers.flightId",
-            "description": "<p>Flight Id</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberReservationList.passengers.passengerName",
-            "description": "<p>승객 영문이름</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data.nonMemberReservationList.passengers.isActive",
-            "description": "<p>isActive (Boolean, Y/N)</p>"
-          }
-        ]
-      }
-    },
-    "filename": "./src/app.ts",
-    "groupTitle": "Reservation",
-    "sampleRequest": [
-      {
-        "url": "https://api.sharevalue.co/reservation/air/non-member"
-      }
-    ]
-  },
-  {
-    "type": "post",
-    "url": "/reservation/air/non-member/:flightId/request-changes",
+    "url": "/reservation/air/:flightId/request-changes",
     "title": "/request-changes",
     "version": "0.1.0",
     "name": "reservation_-_request-changes",
@@ -2705,147 +2598,99 @@ define({ "api": [
         "name": "user"
       }
     ],
-    "description": "<p>항공 예약 변경 요청 (APIS or 체류지변경)</p>",
+    "description": "<p>항공 예약 변경 요청</p>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>sessionToken</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{ \"authorization\": \"Bearer 3231cd25a5f662e28e61d11a697afcbf30c86de36d45586228a14c02005f3f336c07d967b7d312c2e25e8a92f50fdcf70d223033119f20c884a44c195b8ef18c\" }",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "sessionToken",
+            "description": "<p>sessionToken. (현재 의미없음, 회원정보를 세션에서 취하기 때문에 예약취소가 진행되지 않음).</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Object[]",
             "optional": false,
             "field": "passengers",
-            "description": "<p>탑승객정보(APIS)</p>"
+            "description": "<p>탑승객정보</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "passengers.flightId",
-            "description": "<p>탑승객정보(APIS) - Flight Id</p>"
+            "description": "<p>탑승객정보(선호좌석) - Flight Id</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "passengers.passengerId",
-            "description": "<p>탑승객정보(APIS) - 승객 Id</p>"
+            "description": "<p>탑승객정보(선호좌석) - 승객 Id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "passengers.preferredSeat",
+            "description": "<p>탑승객정보(선호좌석) - 선호좌석정보(ex.&quot;Window&quot;|&quot;Aisle&quot;)</p>"
           },
           {
             "group": "Parameter",
             "type": "Object[]",
             "optional": false,
-            "field": "passengers.apis",
-            "description": "<p>탑승객정보(APIS) - 탑승객 APIS 정보</p>"
+            "field": "passengers.frequentFlier",
+            "description": "<p>탑승객정보(마일리지) - 마일리지정보</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "passengers.apis.dateOfBirth",
-            "description": "<p>탑승객정보(APIS) - 생년월일</p>"
+            "field": "passengers.frequentFlier.platingCarrier",
+            "description": "<p>탑승객정보(마일리지) - 항공사</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "passengers.apis.nationality",
-            "description": "<p>탑승객정보(APIS) - 국적</p>"
+            "field": "passengers.frequentFlier.membershipAirline",
+            "description": "<p>탑승객정보(마일리지) - 항공사</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "passengers.apis.passportNumber",
-            "description": "<p>탑승객정보(APIS) - 여권번호</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "passengers.apis.passportExpiry",
-            "description": "<p>탑승객정보(APIS) - 여권만료일</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "passengers.apis.passportIssueCountry",
-            "description": "<p>탑승객정보(APIS) - 발행국</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Object[]",
-            "optional": false,
-            "field": "address",
-            "description": "<p>탑승객정보(체류지)</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "address.countryId",
-            "description": "<p>탑승객정보(체류지) - 국가코드</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "address.countryName",
-            "description": "<p>탑승객정보(체류지) - 국가명</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "address.state",
-            "description": "<p>탑승객정보(체류지) - 주 정보</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "address.city",
-            "description": "<p>탑승객정보(체류지) - 도시정보</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "address.address",
-            "description": "<p>탑승객정보(체류지) - 상세주소</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "address.zipCode",
-            "description": "<p>탑승객정보(체류지) - 우편번호</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "account",
-            "description": "<p>비회원 인증을 위한 휴대폰 또는 이메일</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "nonMemberToken",
-            "description": "<p>비회원 예약시 인증을 위한 토큰</p>"
+            "field": "passengers.frequentFlier.airlineMembershipNo",
+            "description": "<p>탑승객정보(마일리지) - 마일리지정보</p>"
           }
         ]
       },
       "examples": [
         {
-          "title": "Request-Example (APIS):",
-          "content": "{\n   \"passengers\": [\n     {\n       \"flightId\": 10154,\n       \"passengerId\": 16205,\n       \"apis\": {\n           \"dateOfBirth\": \"2000-05-29\",\n           \"nationality\": \"KR\",\n           \"passportNumber\": \"Y001\",\n           \"passportExpiry\": \"2025-05-05\",\n           \"passportIssueCountry\": \"KR\"\n        }\n     }\n   ],\n    \"account\": \"hyyoo@sharevaluecorp.com\",\n    \"nonMemberToken\": \"OTZlNzkyMTg5NjVlYjcyYzkyYTU0OWRkNWEzMzAxMTI=\"\n}",
-          "type": "json"
-        },
-        {
-          "title": "Request-Example (체류지):",
-          "content": "{\n   \"address\": [\n     {\n       \"countryId\": 242,\n       \"countryName\": \"US\",\n       \"state\": \"Newyork\",\n       \"city\": \"Manhatan\",\n       \"address\":\"613 Bake\",\n       \"zipCode\": \"83219\"\n     }\n   ],\n    \"account\": \"hyyoo@sharevaluecorp.com\",\n    \"nonMemberToken\": \"OTZlNzkyMTg5NjVlYjcyYzkyYTU0OWRkNWEzMzAxMTI=\"\n}",
+          "title": "Request-Example:",
+          "content": "{\n    \"passengers\": [\n        {\n            \"flightId\": 7854,\n            \"passengerId\": 13340,\n            \"preferredSeat\": \"Window\"\n        },\n        {\n            \"flightId\": 7854,\n            \"passengerId\": 13340,\n            \"frequentFlier\": {\n                \"platingCarrier\": \"KE\",\n                \"membershipAirline\": \"KE\",\n                \"airlineMembershipNo\": \"11111111\"\n            }\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -2891,11 +2736,11 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "Reservation",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/reservation/air/non-member/:flightId/request-changes"
+        "url": "https://api-dev.smartbookingplus.com/reservation/air/:flightId/request-changes"
       }
     ]
   },
@@ -2980,11 +2825,11 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "Reservation",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/reservation/air/:flightId/seat"
+        "url": "https://api-dev.smartbookingplus.com/reservation/air/:flightId/seat"
       }
     ]
   },
@@ -3069,11 +2914,11 @@ define({ "api": [
         ]
       }
     },
-    "filename": "./src/app.ts",
+    "filename": "src/app.ts",
     "groupTitle": "Reservation",
     "sampleRequest": [
       {
-        "url": "https://api.sharevalue.co/reservation/air/:flightId/seatMap"
+        "url": "https://api-dev.smartbookingplus.com/reservation/air/:flightId/seatMap"
       }
     ]
   }
