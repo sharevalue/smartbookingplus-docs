@@ -1,8 +1,8 @@
 [
   {
     "type": "get",
-    "url": "v1/shopping",
-    "title": "v1/shopping",
+    "url": "/v1/shopping",
+    "title": "",
     "version": "1.0.1",
     "name": "shopping",
     "group": "AIR",
@@ -31,7 +31,6 @@
         }
       ]
     },
-    "description": "<p>Air Shop</p>",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -59,21 +58,21 @@
             "type": "String",
             "optional": false,
             "field": "legs.from",
-            "description": "<p>from(iata-code) ex. ICN</p>"
+            "description": "<p>From(IATA-CODE) ex. ICN</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "legs.to",
-            "description": "<p>to(iata-code) ex. BCN</p>"
+            "description": "<p>to(IATA-CODE) ex. BCN</p>"
           },
           {
             "group": "Parameter",
             "type": "Date",
             "optional": false,
             "field": "legs.departureDate",
-            "description": "<p>departureDate ex.YYYY-MM-DD</p>"
+            "description": "<p>DepartureDate ex.YYYY-MM-DD</p>"
           },
           {
             "group": "Parameter",
@@ -86,7 +85,7 @@
             ],
             "optional": false,
             "field": "cabins",
-            "description": "<p>cabinClass ex) [&quot;economy&quot;]</p>"
+            "description": "<p>CabinClasses ex. [&quot;economy&quot;]</p>"
           },
           {
             "group": "Parameter",
@@ -111,6 +110,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "passengers.INF",
+            "description": "<p>Number of Infant</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String[]",
             "allowedValues": [
               "\"1G\"",
@@ -118,7 +124,7 @@
             ],
             "optional": false,
             "field": "provider",
-            "description": ""
+            "description": "<p>ex. [&quot;SBP&quot;]</p>"
           },
           {
             "group": "Parameter",
@@ -129,7 +135,7 @@
             ],
             "optional": false,
             "field": "passengerType",
-            "description": "<p>PassengerTypeCode of ADT</p>"
+            "description": "<p>PassengerTypeCode of ADT ex. ADT</p>"
           }
         ]
       }
@@ -138,7 +144,7 @@
     "groupTitle": "AIR",
     "sampleRequest": [
       {
-        "url": "https://api-dev.smartbookingplus.comv1/shopping"
+        "url": "https://api-dev.smartbookingplus.com/v1/shopping"
       }
     ]
   },
