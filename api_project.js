@@ -3,7 +3,7 @@ define({
   "version": "1.0.1",
   "description": "쉐어밸류에서 제공하는 스마트 부킹 플러스 API 문서입니다.",
   "title": "SmartBookingPlus API",
-  "url": "https://docs.smartbookingplus.com",
+  "url": "https://api-manager.smartbookingplus.com",
   "sampleUrl": "https://api-dev.smartbookingplus.com",
   "header": {
     "title": "시작하기",
@@ -22,7 +22,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2023-04-18T08:00:05.187Z",
+    "time": "2023-04-18T08:08:35.184Z",
     "url": "https://apidocjs.com",
     "version": "0.28.1"
   }
