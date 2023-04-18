@@ -89,28 +89,28 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "Object[]",
+            "type": "Object",
             "optional": false,
             "field": "passengers",
             "description": ""
           },
           {
             "group": "Parameter",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "passengers.ADT",
             "description": "<p>Number of Adults</p>"
           },
           {
             "group": "Parameter",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "passengers.CHD",
             "description": "<p>Number of Child</p>"
           },
           {
             "group": "Parameter",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "passengers.INF",
             "description": "<p>Number of Infant</p>"
