@@ -7,7 +7,7 @@ define({
   "sampleUrl": "https://api-dev.smartbookingplus.com",
   "header": {
     "title": "시작하기",
-    "content": "<h1>Hi</h1>\n<p>There</p>\n"
+    "content": ""
   },
   "footer": {
     "title": "용어집",
@@ -22,7 +22,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2023-04-17T09:59:51.991Z",
+    "time": "2023-04-18T08:00:05.187Z",
     "url": "https://apidocjs.com",
     "version": "0.28.1"
   }
