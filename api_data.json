@@ -27,31 +27,38 @@
         {
           "title": "Header-Example:",
           "content": "{\n  \"Authorization\": \"Bearer {API_TOKEN}\"\n}",
-          "type": "String"
+          "type": "json"
         }
       ]
     },
     "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"routeType\": \"RT\",\n  \"legs\": [\n      {\n          \"from\": \"ICN\",\n          \"to\": \"SFO\",\n          \"departureDate\": \"2023-04-21\",\n      },\n      {\n          \"from\": \"SFO\",\n          \"to\": \"ICN\",\n          \"departureDate\": \"2023-04-27\",\n      }\n  ],\n  \"cabins\": [\n      \"economy\"\n  ],\n  \"passengers\": {\n      \"ADT\": 1\n  }\n}",
+          "type": "json"
+        }
+      ],
       "fields": {
         "Parameter": [
           {
             "group": "Parameter",
             "type": "String",
             "allowedValues": [
-              "\"RT\"",
               "\"OW\"",
+              "\"RT\"",
               "\"MD\""
             ],
             "optional": false,
             "field": "routeType",
-            "description": ""
+            "description": "<p>OW = One-way, RT=Round-trip, MD=Multi-way</p>"
           },
           {
             "group": "Parameter",
             "type": "Object[]",
             "optional": false,
             "field": "legs",
-            "description": ""
+            "description": "<p>max-length = 3</p>"
           },
           {
             "group": "Parameter",
@@ -117,24 +124,14 @@
           },
           {
             "group": "Parameter",
-            "type": "String[]",
-            "allowedValues": [
-              "\"1G\"",
-              "\"SBP\""
-            ],
-            "optional": false,
-            "field": "provider",
-            "description": "<p>ex. [&quot;SBP&quot;]</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "String",
             "allowedValues": [
               "\"ADT\"",
               "\"LBR\""
             ],
-            "optional": false,
+            "optional": true,
             "field": "passengerType",
+            "defaultValue": "ADT",
             "description": "<p>PassengerTypeCode of ADT ex. ADT</p>"
           }
         ]
