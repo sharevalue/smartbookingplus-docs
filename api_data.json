@@ -96,7 +96,7 @@
       },
       {
         "group": "Body",
-        "type": "Object[]",
+        "type": "Object",
         "optional": false,
         "field": "passengers",
         "description": ""
@@ -105,7 +105,7 @@
         "group": "Body",
         "type": "Number",
         "optional": false,
-        "field": "passengers[ADT]",
+        "field": "passengers.ADT",
         "description": "<p>Number of Adults</p>"
       },
       {
