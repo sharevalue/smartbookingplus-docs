@@ -1,6 +1,6 @@
 [
   {
-    "type": "get",
+    "type": "post",
     "url": "/v1/shopping",
     "title": "Shopping",
     "version": "1.0.1",
@@ -89,28 +89,28 @@
           },
           {
             "group": "Parameter",
-            "type": "Object",
+            "type": "Object[]",
             "optional": false,
             "field": "passengers",
             "description": ""
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Number",
             "optional": false,
             "field": "passengers.ADT",
             "description": "<p>Number of Adults</p>"
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Number",
             "optional": false,
             "field": "passengers.CHD",
             "description": "<p>Number of Child</p>"
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Number",
             "optional": false,
             "field": "passengers.INF",
             "description": "<p>Number of Infant</p>"
