@@ -1082,7 +1082,7 @@ define({ "api": [
             "type": "object[]",
             "optional": false,
             "field": "data.flights.fareQuotes",
-            "description": "<p>Reservation FareInfo</p>"
+            "description": "<p>Reservation Fare info</p>"
           },
           {
             "group": "Success 200",
@@ -1103,56 +1103,56 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.taxes",
-            "description": "<p>Total Tax</p>"
+            "description": "<p>Total tax</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.taxesInfo",
-            "description": "<p>Tax Details</p>"
+            "description": "<p>Tax details</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.totalPrice",
-            "description": "<p>Total Amount</p>"
+            "description": "<p>Total amount</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.accruedAgentCommAmount",
-            "description": "<p>Agent Comm</p>"
+            "description": "<p>Agent commission amount</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.accruedAgentCommVAT",
-            "description": "<p>Agent Comm Vat</p>"
+            "description": "<p>Agent commission vat</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.passengersCount",
-            "description": "<p>Passenger Counts</p>"
+            "description": "<p>Passenger counts</p>"
           },
           {
             "group": "Success 200",
             "type": "string[]",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.fareBasisCodes",
-            "description": "<p>Fare Basis Codes</p>"
+            "description": "<p>Farebasiscodes</p>"
           },
           {
             "group": "Success 200",
             "type": "string[]",
             "optional": false,
             "field": "data.flights.fareQuotes.pricingInfos.baggage",
-            "description": "<p>Baggage Info</p>"
+            "description": "<p>Baggage info</p>"
           },
           {
             "group": "Success 200",
@@ -1166,7 +1166,7 @@ define({ "api": [
             "type": "string[]",
             "optional": false,
             "field": "data.flights.fareQuotes.index",
-            "description": "<p>Fare Index</p>"
+            "description": "<p>Fare index</p>"
           },
           {
             "group": "Success 200",
@@ -1180,98 +1180,98 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.airlineNumericCode",
-            "description": "<p>Airline Code</p>"
+            "description": "<p>Airline code</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.arrivalAirportCode",
-            "description": "<p>Destination Code</p>"
+            "description": "<p>Destination code</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.arrivalDate",
-            "description": "<p>Arrival Date</p>"
+            "description": "<p>Arrival date</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.arrivalTerminal",
-            "description": "<p>Arrival Terminal</p>"
+            "description": "<p>Arrival terminal</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.arrivalTime",
-            "description": "<p>Arrival Time (HH:mm)</p>"
+            "description": "<p>Arrival time (HH:mm)</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.bookingClass",
-            "description": "<p>Booking Class</p>"
+            "description": "<p>Booking class</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.charterFareId",
-            "description": "<p>CharterFareId From Pricing</p>"
+            "description": "<p>CharterFareId from Pricing</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.charterScheduleId",
-            "description": "<p>charterScheduleId From Pricing</p>"
+            "description": "<p>charterScheduleId from Pricing</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.connectionTime",
-            "description": "<p>ConnectionTime</p>"
+            "description": "<p>Connection time</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.departureAirportCode",
-            "description": "<p>Origin Airport Code</p>"
+            "description": "<p>Departure airport code</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.departureDate",
-            "description": "<p>Departure Date</p>"
+            "description": "<p>Departure date</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.departureTerminal",
-            "description": "<p>Departure Terminal</p>"
+            "description": "<p>Departure terminal</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.departureTime",
-            "description": "<p>Departure Time</p>"
+            "description": "<p>Departure time</p>"
           },
           {
             "group": "Success 200",
             "type": "string[]",
             "optional": false,
             "field": "data.flights.segments.duration",
-            "description": "<p>Flight Time</p>"
+            "description": "<p>Flight time</p>"
           },
           {
             "group": "Success 200",
@@ -1285,7 +1285,7 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.group",
-            "description": "<p>Segment Group</p>"
+            "description": "<p>Segment group</p>"
           },
           {
             "group": "Success 200",
@@ -1306,14 +1306,14 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.serviceClass",
-            "description": "<p>Cabin Class</p>"
+            "description": "<p>Cabin class</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.stopOver",
-            "description": "<p>StopOver Code</p>"
+            "description": "<p>Stopover code</p>"
           },
           {
             "group": "Success 200",
@@ -1334,21 +1334,21 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.airlineId",
-            "description": "<p>Airline Code</p>"
+            "description": "<p>Airline code</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.airline",
-            "description": "<p>Airline Code</p>"
+            "description": "<p>Airline code</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.airlineName",
-            "description": "<p>Airline Korean Name</p>"
+            "description": "<p>Airline name</p>"
           },
           {
             "group": "Success 200",
@@ -1369,7 +1369,7 @@ define({ "api": [
             "type": "string[]",
             "optional": false,
             "field": "data.flights.segments.planeName",
-            "description": "<p>Plane Infos</p>"
+            "description": "<p>Plane infos</p>"
           },
           {
             "group": "Success 200",
@@ -1411,21 +1411,21 @@ define({ "api": [
             "type": "boolean",
             "optional": false,
             "field": "data.flights.segments.status",
-            "description": "<p>Segment Status</p>"
+            "description": "<p>Segment status</p>"
           },
           {
             "group": "Success 200",
             "type": "number",
             "optional": false,
             "field": "data.flights.segments.index",
-            "description": "<p>Segment Index</p>"
+            "description": "<p>Segment index</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.fareBasisCode",
-            "description": "<p>Segment Farebasiscode</p>"
+            "description": "<p>Segment farebasiscode</p>"
           },
           {
             "group": "Success 200",
@@ -1446,7 +1446,7 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.segments.baggage.amount",
-            "description": "<p>Unit Amount</p>"
+            "description": "<p>Unit amount</p>"
           },
           {
             "group": "Success 200",
@@ -1481,7 +1481,7 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.passengers.birthDate",
-            "description": "<p>Birth date</p>"
+            "description": "<p>Birthday</p>"
           },
           {
             "group": "Success 200",
@@ -1495,14 +1495,14 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "data.flights.passengers.passengerType",
-            "description": "<p>PassengerType</p>"
+            "description": "<p>passenger type of adult passenger</p>"
           },
           {
             "group": "Success 200",
             "type": "string",
             "optional": false,
             "field": "data.flights.passengers.nameKo",
-            "description": "<p>NameKo</p>"
+            "description": "<p>korean name</p>"
           },
           {
             "group": "Success 200",
@@ -2340,6 +2340,18 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "string",
+            "allowedValues": [
+              "\"RT\"",
+              "\"OW\"",
+              "\"MD\""
+            ],
+            "optional": false,
+            "field": "routeType",
+            "description": "<p>route type</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "object",
             "optional": false,
             "field": "passengers",
@@ -2393,28 +2405,6 @@ define({ "api": [
             "optional": false,
             "field": "legs.departureDate",
             "description": "<p>'YYYY-MM-DD'</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "string[]",
-            "allowedValues": [
-              "\"1G\"",
-              "\"SBP\""
-            ],
-            "optional": false,
-            "field": "provider",
-            "description": "<p>ex. [&quot;SBP&quot;]</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "string",
-            "allowedValues": [
-              "\"ADT\"",
-              "\"LBR\""
-            ],
-            "optional": false,
-            "field": "passengerType",
-            "description": "<p>Passenger type of adult ex. ADT</p>"
           }
         ]
       }
